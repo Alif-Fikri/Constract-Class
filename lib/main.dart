@@ -1,20 +1,31 @@
 import 'package:belajar_flutter/belajartext.dart';
 import 'package:belajar_flutter/container.dart';
 import 'package:belajar_flutter/invisible.dart';
+import 'package:belajar_flutter/statefull.dart';
+import 'package:belajar_flutter/testing.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(bebas());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class bebas extends StatelessWidget {
+  const bebas({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Invisiblebelajar());
+    return MaterialApp(home: BelajartStatefull());
   }
 }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: increment());
+//   }
+// }
 
 // class MyWidget extends StatelessWidget {
 //   const MyWidget({super.key});
