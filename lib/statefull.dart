@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-class BelajartStatefull extends StatelessWidget {
+class BelajartStatefull extends StatefulWidget {
   const BelajartStatefull({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    int angka = 0;
+  State<BelajartStatefull> createState() => _BelajartStatefullState();
+}
 
+class _BelajartStatefullState extends State<BelajartStatefull> {
+  int angka = 0;
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Belajar StateFull'),
@@ -18,19 +22,32 @@ class BelajartStatefull extends StatelessWidget {
           children: [
             Text('$angka', style: TextStyle(fontSize: 30)),
             // SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                print('sudah ditambahkan');
-              },
-              child: Text('Tambah'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // print('sudah ditambahkan');
+                    print(angka);
+                    angka = angka + 1;
+                    setState(() {});
+                  },
+                  child: Icon(Icons.add),
+                  // child: Text('Tambah'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // print('sudah berkurang');
+                    print(angka);
+                    angka = angka - 1;
+                    setState(() {});
+                  },
+                  child: Icon(Icons.remove),
+                  // child: Text('Kurang'),
+                ),
+              ],
             ),
             // SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                print('sudah berkurang');
-              },
-              child: Text('Kurang'),
-            ),
           ],
         ),
       ),
