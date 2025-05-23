@@ -1,8 +1,12 @@
 import 'package:belajar_flutter/belajartext.dart';
 import 'package:belajar_flutter/container.dart';
+import 'package:belajar_flutter/dialog.dart';
+import 'package:belajar_flutter/ett.dart';
 import 'package:belajar_flutter/invisible.dart';
+import 'package:belajar_flutter/snackbar.dart';
 import 'package:belajar_flutter/statefull.dart';
 import 'package:belajar_flutter/testing.dart';
+import 'package:belajar_flutter/textfield.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +18,7 @@ class bebas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: BelajartStatefull());
+    return MaterialApp(home: Register());
   }
 }
 
@@ -57,3 +61,8 @@ class bebas extends StatelessWidget {
 // Provider
 // Bloc
 // Cubit
+
+// Navigator.push(
+//   context,
+//   MaterialPageRoute(builder: (context) => HalamanBaru()),
+// );

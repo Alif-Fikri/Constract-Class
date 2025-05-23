@@ -38,6 +38,7 @@ class _BelajartStatefullState extends State<BelajartStatefull> {
                 ElevatedButton(
                   onPressed: () {
                     // print('sudah berkurang');
+                    
                     print(angka);
                     angka = angka - 1;
                     setState(() {});

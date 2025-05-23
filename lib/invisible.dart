@@ -5,46 +5,49 @@ class InvisibleBelajar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Belajar Invisible widget'),
-        backgroundColor: Colors.blue,
-      ),
-      body: Stack(
-        children: [
-          Container(
-            width: 500,
-            height: 500,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.black,
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Belajar Invisible widget'),
+          backgroundColor: Colors.blue,
+        ),
+        body: Stack(
+          children: [
+            Container(
+              width: 500,
+              height: 500,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.black,
+              ),
             ),
-          ),
-          Container(
-            width: 400,
-            height: 400,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.red,
+            Container(
+              width: 400,
+              height: 400,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.red,
+              ),
             ),
-          ),
-          Container(
-            width: 300,
-            height: 300,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.blue,
+            Container(
+              width: 300,
+              height: 300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.blue,
+              ),
             ),
-          ),
-          Container(
-            width: 200,
-            height: 200,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.green,
+            Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.green,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
