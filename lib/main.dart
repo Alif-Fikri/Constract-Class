@@ -3,13 +3,18 @@ import 'package:belajar_flutter/container.dart';
 import 'package:belajar_flutter/dialog.dart';
 import 'package:belajar_flutter/ett.dart';
 import 'package:belajar_flutter/invisible.dart';
+import 'package:belajar_flutter/register.dart';
 import 'package:belajar_flutter/snackbar.dart';
 import 'package:belajar_flutter/statefull.dart';
 import 'package:belajar_flutter/testing.dart';
-import 'package:belajar_flutter/textfield.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.openBox('users');
   runApp(bebas());
 }
 
@@ -66,3 +71,15 @@ class bebas extends StatelessWidget {
 //   context,
 //   MaterialPageRoute(builder: (context) => HalamanBaru()),
 // );
+
+// Future<String> getData() async {
+//   await Future.delayed(Duration(seconds: 2)); // simulasi loading
+//   return "data sudah diambil";
+// }
+
+// void main() async {
+//   print("mulai");
+//   String data = await getData();
+//   print(data);
+//   print("selesai");
+// }
